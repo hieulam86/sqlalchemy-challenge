@@ -47,3 +47,27 @@ Analyze the stations in the dataset:
 7. Plot the TOBS data as a histogram with bins=12.
 
 8. Close the session.
+
+# Design Your Climate App
+
+## API Routes
+- Create routes for the homepage and listing available routes.
+- Route for returning a JSON representation of date and precipitation (api/v1.0/precipitation).
+- Route for returning a JSON list of stations (api/v1.0/stations).
+- Route for returning a JSON list of temperature observations for the most active station (api/v1.0/tobs).
+
+## Dynamic Routes
+- Route for returning temperature statistics for a specified start date (api/v1.0/<start>).
+- Route for returning temperature statistics for a specified date range (api/v1.0/<start>/<end>).
+
+## Database Connection and Setup
+- Connect to the SQLite database using SQLAlchemy create_engine.
+- Reflect the tables using automap_base.
+- Save references to the tables in the SQLite file.
+
+## Flask App Setup
+- Set up the Flask application.
+
+## Data Routes
+- Implement data retrieval and formatting for the routes.
+- Handle edge cases and errors gracefully.
